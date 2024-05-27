@@ -40,6 +40,14 @@ app.get('/users', (req, res) => {
     res.status(200).json(users)
 })
 
+app.get('/healthy', (req, res) => {
+    res.status(200).json({
+        "healt": "live",
+        "status": 200,
+        "message": "ok"
+    });
+});
+
 app.get('/users/:id', (req, res) => {
     console.log('id params', req.params.id);
 
